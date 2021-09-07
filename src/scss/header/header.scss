@@ -1,10 +1,13 @@
 header {
+   display: fixed;
    width: 100%;
    border-top: 3px solid#f48225;
+   background-color: #f8f9f9;
+   box-shadow: 0px 1px 4px hsla(0, 0%, 0%, 0.05), 0px 1px 5px hsla(0, 0%, 0%, 0.05), 0px 1px 5px hsla(0, 0%, 0%, 0.05);
 
    .container {
       display: grid;
-      grid-template-columns: 166px 1fr 325px;
+      grid-template-columns: auto 1fr auto;
       grid-column-gap: 10px;
       min-width: 850px;
       max-width: 1250px;
@@ -12,21 +15,20 @@ header {
       margin: auto;
       align-items: center;
 
-      .logo-img {
+      .main-logo-img {
          height: 47px;
          width: 150px;
-         margin: 0;
          padding: 0 8px;
 
          &:hover {
-            background-color: rgb(226, 228, 230);
+            background-color: #e3e6e8;
          }
 
          a {
             display: flex;
             padding: 0 8px;
             height: 100%;
-            align-items: center;
+            // align-items: center;
             font-size: 0;
             background-image: url("../assets/sprites.svg");
             background-position: 0px 0px;
@@ -36,18 +38,19 @@ header {
 
       form {
          position: relative;
+
          input {
             width: 100%;
-            padding: 8px 9px 8px 32px;
+            padding: 9px 9px 9px 32px;
             box-sizing: border-box;
-            color: rgb(55, 60, 64);
-            border: 1px solid #b7bec4;
+            color: #9b9ea1;
+            border: 1px solid #babfc4;
             border-radius: 3px;
             font-size: 13px;
             outline: none;
 
             &:focus {
-               border-color: rgb(106, 187, 249);
+               border-color: #6abbf9;
                box-shadow: 0 0 0 4px #d3e5f3;
             }
          }
@@ -66,24 +69,25 @@ header {
          margin: 0;
          padding: 0;
 
-         .links li {
+         .info-buttons li {
             display: flex;
             height: 47px;
             align-items: center;
 
             &:hover {
-               background-color: rgb(226, 228, 230);
+               background-color: #e2e4e6;
             }
 
-            &[title]:hover:after {
-               background-color: black;
-            }
+            // &.active {
+            //    background-color: #d6d9dc;
+            //    svg {
+            //       fill: #3b4045;
+            //    }
+            // }
 
-            a {
+            button {
                height: 18px;
-               width: 20px;
-               padding: 10px;
-               text-align: center;
+               width: 40px;
             }
 
             svg {
@@ -93,36 +97,43 @@ header {
                fill: #3b4045;
             }
          }
+      }
 
-         .login {
-            li button {
-               padding: 8px 10px;
-               margin: 3px;
-               font-size: 13px;
-               border: solid 1px;
-               border-radius: 3px;
+      .login-links {
+         li a {
+            padding: 8px 10px;
+            margin: 2px;
+            font-size: 13px;
+            border: solid 1px;
+            border-radius: 3px;
+         }
+
+         li:first-of-type a {
+            color: #437aa2;
+            background-color: #e1ecf4;
+            border-color: #7aa7c7;
+            box-shadow: inset 0 1px 0 0 hsla(0, 0%, 100%, 0.7);
+
+            &:hover {
+               color: #345f7c;
+               background-color: #b3d3ea;
             }
 
-            li:first-of-type button {
-               color: #437aa2;
-               background-color: #e1ecf4;
-               border-color: #437aa2;
-               box-shadow: inset 0 1px 0 0 hsla(0, 0%, 100%, 0.7);
-
-               &:hover {
-                  color: #345f7c;
-                  background-color: #b3d3ea;
-               }
+            &:active {
+               background-color: #a0c8e4;
             }
-            li:last-of-type button {
-               color: #f0f9ff;
-               background-color: #0a95ff;
-               border-color: #0a95ff;
-               box-shadow: inset 0 1px 0 0 hsla(0, 0%, 100%, 0.4);
+         }
+         li:last-of-type a {
+            color: #f0f9ff;
+            background-color: #0a95ff;
+            border-color: #0a95ff;
+            box-shadow: inset 0 1px 0 0 hsla(0, 0%, 100%, 0.4);
 
-               &:hover {
-                  background-color: #3f64cc;
-               }
+            &:hover {
+               background-color: #0074cc;
+            }
+            &:active {
+               background-color: #0063bf;
             }
          }
       }

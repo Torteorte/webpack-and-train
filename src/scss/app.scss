@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import "./header/header.scss";
 
 body {
-   background-color: #f8f9f9;
+   background-color: #ffffff;
    width: 100%;
+   font-family: "Roboto", sans-serif;
 }
 
 li {
@@ -11,4 +13,9 @@ li {
 
 a {
    text-decoration: none;
+}
+
+button {
+   background: transparent;
+   border: none;
 }

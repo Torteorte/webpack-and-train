@@ -8,7 +8,7 @@ module.exports = {
       index: './src/index.js'
    },
    output: {
-      filename: './index.js',
+      filename: './js/index.js',
    },
 
    devServer: {
@@ -35,7 +35,7 @@ module.exports = {
          filename: 'contacts.html'
       }),
       new MiniCssExtractPlugin({
-         filename: './[name].css'
+         filename: './css/[name].css'
       }),
       new CleanWebpackPlugin(),
    ],
