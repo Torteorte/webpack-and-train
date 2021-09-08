@@ -23,16 +23,16 @@ module.exports = {
          filename: 'index.html'
       }),
       new HtmlWebpackPlugin({
-         template: './src/header.html',
+         template: './src/login.html',
          inject: true,
          chunks: ['index'],
-         filename: 'header.html'
+         filename: 'login.html'
       }),
       new HtmlWebpackPlugin({
-         template: './src/contacts.html',
+         template: './src/registration.html',
          inject: true,
          chunks: ['index'],
-         filename: 'contacts.html'
+         filename: 'registration.html'
       }),
       new MiniCssExtractPlugin({
          filename: './css/[name].css'

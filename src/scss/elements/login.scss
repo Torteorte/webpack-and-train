@@ -1,0 +1,123 @@
+.main-login-page {
+  padding: 0;
+  background-color: #f1f2f3;
+  font-size: 13px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    color: #137ecf;
+  }
+
+  .main-container {
+    padding-top: 74px;
+    width: 315px;
+    margin: auto;
+
+    .link-to-main-page {
+      width: 32px;
+      height: 37px;
+      margin: auto;
+    }
+
+    .login-with-social {
+      margin: 21px auto 16px;
+
+      li {
+        svg {
+          margin: -4px 0;
+          fill: white;
+        }
+
+        a {
+          padding: 10px;
+          margin: 10px 0;
+          border: 1px solid #d6d9dc;
+          display: block;
+          text-align: center;
+          border-radius: 5px;
+
+          &:hover {
+            background-color: #f0f8ff;
+          }
+
+          &:active {
+            border-color: #6abbf9;
+            box-shadow: 0 0 0 4px #d3e5f3;
+          }
+        }
+
+        &:first-child a {
+          color: #464b4f;
+          background-color: white;
+
+          &:hover {
+            background-color: #f8f9f9;
+          }
+        }
+
+        &:nth-child(2) a {
+          color: white;
+          background-color: #232629;
+
+          &:hover {
+            background-color: #232629;
+          }
+        }
+
+        &:nth-child(3) a {
+          color: white;
+          background-color: #385499;
+
+          &:hover {
+            background-color: #314a86;
+          }
+        }
+      }
+    }
+
+    form {
+      width: 100%;
+      margin: 16px auto 24px;
+      padding: 24px;
+      box-sizing: border-box;
+      border-radius: 7px;
+      background-color: white;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05),0 20px 48px rgba(0,0,0,0.05),
+      0 1px 4px rgba(0,0,0,0.1);
+
+      .input-container {
+        margin: 6px 0;
+
+        label, a{
+          padding: 0 2px;
+          margin: 5px 0;
+          font-weight: bold;
+          cursor: pointer;
+          font-size: 15px;
+          display: inline-block;
+        }
+
+        a {
+          float: right;
+          font-weight: normal;
+          font-size: 13px;
+        }
+      }
+
+      input[type="submit"] {
+        margin: 12px 0 0;
+        padding: 10px 0;
+        width: 100%;
+      }
+    }
+
+    p {
+      padding: 16px;
+      margin: 0 0 24px;
+      text-align: center;
+    }
+  }
+}

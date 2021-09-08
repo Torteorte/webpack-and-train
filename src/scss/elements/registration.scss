@@ -1,0 +1,46 @@
+.main-registration-page {
+
+  .main-container {
+    width: 415px;
+
+    .join-text {
+      font-size: 20px;
+      line-height: 27px;
+      color: #232629;
+    }
+  }
+
+  .main-small-container {
+    width: 315px;
+    margin: auto;
+
+    form {
+      p {
+        color: #6a737c;
+        text-align: left;
+        padding: 0;
+        margin: 10px 0;
+        font-size: 12px;
+
+        a {
+          font-size: 12px;
+        }
+      }
+
+      input[type="submit"] {
+        margin-bottom: 20px;
+      }
+
+      .grid-input-checkbox {
+        display: grid;
+        grid-template-columns: 20px 1fr;
+
+        label {
+          color: #343536;
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
