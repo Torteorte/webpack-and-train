@@ -5,6 +5,7 @@ header {
   background-color: #f8f9f9;
   box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.05), 0 1px 5px hsla(0, 0%, 0%, 0.05),
   0 1px 5px hsla(0, 0%, 0%, 0.05);
+  z-index: 10;
 
   .header-container {
     display: grid;
@@ -21,15 +22,16 @@ header {
       flex-direction: row;
       height: 47px;
      // width: 150px;
-      padding: 0 8px;
+      padding: 0 8px 0 0;
 
-      .burger-nuv {
+      .burger-nav {
         display: flex;
         height: 100%;
         align-items: center;
         font-size: 0;
         width: 45px;
         padding: 0;
+        z-index: 100;
 
         &:hover {
           background-color: #e3e6e8;
@@ -74,7 +76,7 @@ header {
       }
     }
 
-    .header-buttons, ul {
+    .header-buttons, .info-buttons, .login-links {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -105,6 +107,7 @@ header {
         }
 
         svg {
+          margin: -4px 0;
           fill: #838c95;
         }
 
@@ -137,6 +140,10 @@ header {
         &:active {
           background-color: #a0c8e4;
         }
+      }
+
+      li:last-of-type a {
+        margin-right: 10px;
       }
     }
   }

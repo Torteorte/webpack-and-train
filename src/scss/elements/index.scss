@@ -1,0 +1,350 @@
+.container {
+  display: grid;
+  grid-template-columns: 164px 1fr 300px;
+  min-width: 850px;
+  max-width: 1250px;
+  margin: auto;
+  padding-top: 50px;
+
+  main {
+    border-left: 1px solid #d6d9dc;
+    padding: 24px 0 20px 0;
+
+    .main-head-field {
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      padding: 0 24px 24px;
+
+      h2 {
+        font-size: 30px;
+        text-align: center;
+        font-weight: normal;
+        margin: 0;
+      }
+
+      button {
+        font-size: 13px;
+        padding: 10px;
+        margin-right: 10px;
+      }
+    }
+
+    .bottom-main-button {
+      padding: 10px;
+      margin-right: 25px;
+      font-size: 13px;
+      float: right;
+    }
+  }
+
+  .marks-and-sort {
+    font-size: 13px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    //border-bottom: 1px solid #d6d9dc;
+    margin-bottom: 16px;
+    padding: 0 24px;
+
+    .main-marks {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 250px;
+
+      li {
+        margin: 2px;
+      }
+    }
+
+    .more-marks {
+      color: #2186d2;
+      margin-left: 5px;
+    }
+
+    .main-sort {
+      display: flex;
+      flex-direction: row;
+      align-self: end;
+
+      button {
+        padding: 10px;
+        border: 1px solid #9fa6ad;
+        border-right: none;
+        color: rgb(106, 115, 124);
+        cursor: pointer;
+
+        &:hover {
+          background-color: #f8f9f9;
+          color: rgb(82, 89, 96);
+        }
+
+        &:active {
+          background-color: #e3e6e8;
+        }
+
+        span {
+          color: white;
+          padding: 2px 5px;
+          margin-right: 5px;
+          border-radius: 2px;
+          background-color: rgb(0, 116, 204);
+          font-size: 11px;
+        }
+      }
+
+      li:first-child button {
+        border-bottom-left-radius: 3px;
+        border-top-left-radius: 3px;
+      }
+
+      li:last-child button {
+        border-bottom-right-radius: 3px;
+        border-top-right-radius: 3px;
+        border-right: 1px solid #9fa6ad;
+      }
+    }
+  }
+
+  .mark {
+    display: inline-block;
+    color: #4079a1;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: #e1ecf4;
+
+    &:hover {
+      color: #2f5b79;
+      background-color: #d0e3f1;
+    }
+  }
+
+  aside {
+    padding-top: 24px;
+
+    h3 {
+      margin-top: 8px;
+      color: rgb(59, 64, 69);
+      font-weight: normal;
+    }
+
+    ul {
+
+      li {
+
+        font-size: 13px;
+        margin: 10px 0;
+        color: #6e767f;
+      }
+    }
+
+    p a {
+      font-size: 13px;
+      color: #2186d2;
+
+      &:hover {
+        color: #2ea4ff;
+      }
+
+      svg {
+        margin: -4px 0;
+      }
+    }
+
+    .all-notes-field {
+      text-align: right;
+    }
+  }
+}
+
+.side-nav {
+  color: rgb(82, 89, 96);
+  padding-top: 24px;
+
+  li {
+    font-size: 13px;
+
+    a {
+      display: inline-block;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 8px;
+      color: #5c6269;
+      font-size: 13px;
+
+      &:hover {
+        color: rgb(12, 13, 14);
+      }
+    }
+
+    .nuv-public {
+      margin-top: 8px;
+
+      .uppercase-for-li {
+        padding: 8px;
+        color: rgb(106, 115, 124);
+        text-transform: uppercase;
+      }
+
+      a {
+        position: relative;
+        display: inline-block;
+        padding-left: 28px;
+
+        &:hover {
+          color: rgb(12, 13, 14);
+        }
+
+        svg {
+          position: absolute;
+          left: 6px;
+          top: 6px;
+        }
+
+        &:hover svg {
+          fill: black;
+        }
+      }
+    }
+
+    &.active {
+      background-color: #f1f2f3;
+      border-right: 3px solid #f48225;
+
+      a {
+        font-weight: bold;
+        color: rgb(12, 13, 14);
+      }
+    }
+  }
+}
+
+.questions-field {
+  border-top: 1px solid #d6d9dc;
+  margin-right: 24px;
+  margin-bottom: 30px;
+  font-size: 10px;
+  color: rgb(131, 140, 149);
+
+  > li {
+    padding: 12px 8px;
+    border-bottom: 1px solid #f1f2f3;
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    .question-statistics {
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      padding-right: 8px;
+
+      li {
+
+        a {
+          padding: 8px 8px;
+          margin-right: 3px;
+          display: inline-block;
+          color: rgb(131, 140, 149);
+        }
+
+        .statistic-number {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .question {
+
+      h3 {
+        margin: 0 0 10px 2px;
+        font-size: 20px;
+
+        a {
+          color: #2186d2;
+          font-weight: normal;
+
+          &:hover {
+            color: #0a95ff;
+          }
+        }
+      }
+
+      .question-links-information {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .main-marks {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          width: 250px;
+
+          li {
+            margin: 2px;
+          }
+        }
+
+        a {
+          font-size: 13px;
+        }
+
+        & > div {
+          text-align: right;
+
+          a {
+            color: rgb(131, 140, 149);
+
+            &:hover {
+              color: #2186d2;
+            }
+          }
+
+          b {
+            font-size: 13px;
+          }
+
+          .to-user-link {
+            color: #2186d2;
+
+            &:hover {
+              color: #2ea4ff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.answers {
+
+  &.have-answers {
+    border: 1px solid rgb(94, 186, 125);
+    border-radius: 3px;
+
+    div {
+      color: rgb(72, 168, 104);
+    }
+  }
+
+  &.submit-answers {
+    background-color: #5eba7d;
+    border-radius: 3px;
+
+    div {
+      color: rgb(255, 255, 255);
+    }
+  }
+}
+
+.views.many-views {
+
+  div {
+    color: rgb(167, 81, 12);
+  }
+}

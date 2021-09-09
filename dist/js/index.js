@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_app_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/app.scss */ \"./src/scss/app.scss\");\n__webpack_require__(/*! normalize.css/normalize.css */ \"./node_modules/normalize.css/normalize.css\");\n\n\n\n//# sourceURL=webpack://newweb/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_app_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/app.scss */ \"./src/scss/app.scss\");\n__webpack_require__(/*! normalize.css/normalize.css */ \"./node_modules/normalize.css/normalize.css\");\n\n\n\nlet burgerNav = document.querySelector('.burger-nav');\nlet navList = document.querySelector('.side-nav');\n\nlet burgerOpen = (event) => {\n    event.preventDefault();\n    event.stopPropagation();\n    event.target.closest('.burger-nav').classList.toggle(\"open\");\n    navList.classList.toggle(\"hidden-nav\");\n}\n\nlet hideNavList = (event) => {\n    if (event.target.className !== \"side-nav\") {\n        navList.classList.add(\"hidden-nav\");\n        burgerNav.classList.remove(\"open\");\n    }\n}\n\nburgerNav.addEventListener('click', burgerOpen);\ndocument.addEventListener('click', hideNavList);\n\n//# sourceURL=webpack://newweb/./src/index.js?");
 
 /***/ })
 

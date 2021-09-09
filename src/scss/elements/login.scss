@@ -11,7 +11,7 @@
     color: #137ecf;
   }
 
-  .main-container {
+  .main-login-container {
     padding-top: 74px;
     width: 315px;
     margin: auto;
@@ -107,7 +107,7 @@
         }
       }
 
-      input[type="submit"] {
+      button[type="submit"] {
         margin: 12px 0 0;
         padding: 10px 0;
         width: 100%;
@@ -118,6 +118,24 @@
       padding: 16px;
       margin: 0 0 24px;
       text-align: center;
+    }
+  }
+}
+
+.main-logo-img {
+
+  .side-nav {
+    width: 250px;
+    top: 47px;
+    position: absolute;
+    background-color: white;
+    padding: 20px 0;
+    z-index: -10;
+    box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.05), 0 1px 5px hsla(0, 0%, 0%, 0.05),
+    0 1px 5px hsla(0, 0%, 0%, 0.05);
+
+    &.hidden-nav {
+      display: none;
     }
   }
 }
