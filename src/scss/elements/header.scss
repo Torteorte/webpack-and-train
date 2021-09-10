@@ -5,8 +5,7 @@ header {
   left: 0;
   border-top: 3px solid #f48225;
   background-color: #f8f9f9;
-  box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.05), 0 1px 5px hsla(0, 0%, 0%, 0.05),
-  0 1px 5px hsla(0, 0%, 0%, 0.05);
+  box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.05), 0 1px 5px hsla(0, 0%, 0%, 0.05), 0 1px 5px hsla(0, 0%, 0%, 0.05);
   z-index: 10;
 
   .burger-nav {
@@ -27,7 +26,7 @@ header {
       display: flex;
       flex-direction: row;
       height: 47px;
-     // width: 150px;
+      // width: 150px;
       padding: 0 8px 0 0;
 
       .burger-nav {
@@ -44,7 +43,7 @@ header {
         }
       }
 
-      .logo-img  {
+      .logo-img {
         display: flex;
         padding: 0 8px;
         width: 150px;
@@ -82,44 +81,46 @@ header {
       }
     }
 
-    .header-buttons, .info-buttons, .login-links {
+    .header-buttons,
+    .info-buttons,
+    .login-links {
       display: flex;
       flex-direction: row;
       align-items: center;
       margin: 0;
       padding: 0;
 
-       .info-buttons li {
+      .info-buttons li {
         display: flex;
         height: 47px;
         align-items: center;
-
-        &:hover {
-          background-color: #e2e4e6;
-        }
-
-       &.active {
-          background-color: #d6d9dc;
-
-          svg {
-            fill: #3b4045;
-          }
-        }
 
         button {
           cursor: pointer;
           height: 100%;
           width: 40px;
           font-size: 0;
+
+          svg {
+            margin: -4px 0;
+            fill: #838c95;
+          }
+
+          &:hover svg {
+            fill: #3b4045;
+          }
         }
 
-        svg {
-          margin: -4px 0;
-          fill: #838c95;
+        button:hover {
+          background-color: #e2e4e6;
         }
 
-        &:hover svg {
-          fill: #3b4045;
+        .active-drop {
+          background-color: #d6d9dc;
+
+          svg {
+            fill: #3b4045;
+          }
         }
       }
     }
@@ -164,9 +165,8 @@ header {
   }
 }
 
-.info-button-dropdown.active {
-
-  .info-container {
+.info-button-dropdown {
+  .info-container.open {
     display: block;
     position: absolute;
     width: 275px;
@@ -175,8 +175,7 @@ header {
     padding-bottom: 10px;
     background-color: white;
     text-align: center;
-    box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.05), 0 1px 5px hsla(0, 0%, 0%, 0.05),
-    0 1px 5px hsla(0, 0%, 0%, 0.05);
+    box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.05), 0 1px 5px hsla(0, 0%, 0%, 0.05), 0 1px 5px hsla(0, 0%, 0%, 0.05);
   }
 }
 
@@ -195,7 +194,7 @@ header {
   div {
     padding: 10px;
 
-    &> a {
+    & > a {
       display: inline-block;
       padding: 10px;
     }
@@ -222,10 +221,8 @@ header {
   }
 }
 
-.info-button-dropdown.active {
-
+.info-button-dropdown {
   .info-container.info-help {
-
     width: 215px;
     padding-bottom: 0;
 
@@ -255,7 +252,8 @@ header {
       }
     }
 
-    p, h4 {
+    p,
+    h4 {
       text-align: left;
       margin: 0;
       padding: 0;

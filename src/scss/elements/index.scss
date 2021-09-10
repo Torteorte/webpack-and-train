@@ -140,7 +140,6 @@
     }
 
     ul {
-
       li {
         margin: 10px 0;
         font-size: 13px;
@@ -248,7 +247,6 @@
       text-align: center;
 
       li {
-
         a {
           display: inline-block;
           padding: 8px 8px;
@@ -263,7 +261,6 @@
     }
 
     .question {
-
       h2 {
         margin: 0 0 10px 2px;
         font-size: 20px;
@@ -323,7 +320,6 @@
 }
 
 .answers {
-
   &.have-answers {
     border: 1px solid rgb(94, 186, 125);
     border-radius: 3px;
@@ -344,7 +340,6 @@
 }
 
 .views.many-views {
-
   div {
     color: rgb(167, 81, 12);
   }
@@ -362,7 +357,6 @@
       }
 
       .question-links-information {
-
         div {
           margin: 5px 0 0 auto;
         }
@@ -388,7 +382,6 @@
     }
 
     main {
-
       .questions-field {
         li {
           display: block;
@@ -409,7 +402,6 @@
         }
 
         .main-sort {
-
           li:nth-of-type(3) button {
             border-right: 1px solid;
           }

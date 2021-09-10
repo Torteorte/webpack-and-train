@@ -2,12 +2,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  //max-height: 100vh;
-  min-height: 100%;
-  //padding: 24px;
+  min-height: calc(100% - 50px);
+  padding-top: 50px;
   background-color: #f1f2f3;
   font-size: 13px;
-  margin-top: 50px;
 
   a {
     color: #137ecf;
@@ -15,7 +13,7 @@
 
   .main-login-container {
     width: 315px;
-    margin: auto;
+    margin: 20px auto;
 
     .link-to-main-page {
       width: 32px;
@@ -87,8 +85,7 @@
       box-sizing: border-box;
       border-radius: 7px;
       background-color: white;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05),0 20px 48px rgba(0,0,0,0.05),
-      0 1px 4px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 20px 48px rgba(0, 0, 0, 0.05), 0 1px 4px rgba(0, 0, 0, 0.1);
 
       .input-container {
         margin: 6px 0;
@@ -97,7 +94,8 @@
           color: black;
         }
 
-        label, a{
+        label,
+        a {
           display: inline-block;
           padding: 0 2px;
           margin: 5px 0;
@@ -137,7 +135,6 @@
 }
 
 .main-logo-img {
-
   .side-nav {
     position: absolute;
     width: 250px;
@@ -145,8 +142,7 @@
     padding: 20px 0;
     background-color: white;
     z-index: -10;
-    box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.05), 0 1px 5px hsla(0, 0%, 0%, 0.05),
-    0 1px 5px hsla(0, 0%, 0%, 0.05);
+    box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.05), 0 1px 5px hsla(0, 0%, 0%, 0.05), 0 1px 5px hsla(0, 0%, 0%, 0.05);
 
     &.hidden-nav {
       display: none;

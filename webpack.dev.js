@@ -5,7 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
 
    entry: {
-      index: './src/index.js'
+      index: './src/index.js',
    },
    output: {
       filename: './js/index.js',
@@ -20,7 +20,7 @@ module.exports = {
          template: './src/index.html',
          inject: true,
          chunks: ['index'],
-         filename: 'index.html'
+         filename: 'index.html',
       }),
       new HtmlWebpackPlugin({
          template: './src/login.html',
@@ -32,10 +32,10 @@ module.exports = {
          template: './src/registration.html',
          inject: true,
          chunks: ['index'],
-         filename: 'registration.html'
+         filename: 'registration.html',
       }),
       new MiniCssExtractPlugin({
-         filename: './css/[name].css'
+         filename: './css/[name].css',
       }),
       new CleanWebpackPlugin(),
    ],
@@ -46,7 +46,7 @@ module.exports = {
             use: [
                MiniCssExtractPlugin.loader,
                "css-loader",
-               "sass-loader"
+               "sass-loader",
             ]
          },
          {
