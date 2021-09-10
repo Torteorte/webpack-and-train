@@ -1,18 +1,19 @@
 .main-login-page {
-  padding: 0;
-  background-color: #f1f2f3;
-  font-size: 13px;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  //max-height: 100vh;
+  min-height: 100%;
+  //padding: 24px;
+  background-color: #f1f2f3;
+  font-size: 13px;
+  margin-top: 50px;
 
   a {
     color: #137ecf;
   }
 
   .main-login-container {
-    padding-top: 74px;
     width: 315px;
     margin: auto;
 
@@ -20,6 +21,7 @@
       width: 32px;
       height: 37px;
       margin: auto;
+      font-size: 0;
     }
 
     .login-with-social {
@@ -32,11 +34,11 @@
         }
 
         a {
+          display: block;
           padding: 10px;
           margin: 10px 0;
-          border: 1px solid #d6d9dc;
-          display: block;
           text-align: center;
+          border: 1px solid #d6d9dc;
           border-radius: 5px;
 
           &:hover {
@@ -91,26 +93,34 @@
       .input-container {
         margin: 6px 0;
 
+        input {
+          color: black;
+        }
+
         label, a{
+          display: inline-block;
           padding: 0 2px;
           margin: 5px 0;
-          font-weight: bold;
           cursor: pointer;
+          font-weight: bold;
           font-size: 15px;
-          display: inline-block;
         }
 
         a {
           float: right;
           font-weight: normal;
           font-size: 13px;
+
+          &:hover {
+            color: #2ea4ff;
+          }
         }
       }
 
       button[type="submit"] {
+        width: 100%;
         margin: 12px 0 0;
         padding: 10px 0;
-        width: 100%;
       }
     }
 
@@ -118,6 +128,10 @@
       padding: 16px;
       margin: 0 0 24px;
       text-align: center;
+
+      a:hover {
+        color: #2ea4ff;
+      }
     }
   }
 }
@@ -125,11 +139,11 @@
 .main-logo-img {
 
   .side-nav {
+    position: absolute;
     width: 250px;
     top: 47px;
-    position: absolute;
-    background-color: white;
     padding: 20px 0;
+    background-color: white;
     z-index: -10;
     box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.05), 0 1px 5px hsla(0, 0%, 0%, 0.05),
     0 1px 5px hsla(0, 0%, 0%, 0.05);

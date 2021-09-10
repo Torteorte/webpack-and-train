@@ -17,14 +17,18 @@
     form {
 
       p {
-        color: #6a737c;
-        text-align: left;
         padding: 0;
         margin: 10px 0;
+        text-align: left;
+        color: #6a737c;
         font-size: 12px;
 
         a {
           font-size: 12px;
+
+          &:hover {
+            color: #2ea4ff;
+          }
         }
       }
 

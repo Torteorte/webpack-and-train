@@ -4,9 +4,9 @@ footer {
    font-size: 13px;
    padding: 40px 0;
 
-   h4 {
+   h3 {
       margin: 0 0 20px;
-      color: #687079;
+      color: rgb(186, 191, 196);
       text-transform: uppercase;
       line-height: 17px;
    }
@@ -25,10 +25,10 @@ footer {
 }
 
 .footer-container {
-   max-width: 1250px;
-   min-width: 850px;
    display: grid;
-   grid-template-columns: 925px 325px;
+   max-width: 1250px;
+   //min-width: 850px;
+   grid-template-columns: 1fr 325px;
    margin: auto;
 
    nav {
@@ -36,58 +36,65 @@ footer {
       flex-direction: row;
       justify-content: space-around;
 
+      div {
+         margin: 10px;
+      }
+
       li {
          a {
-            padding: 4px 0;
             display: inline-block;
+            padding: 4px 0;
          }
       }
    }
 
    .stack-exchange-network {
 
-      li a {
-         padding-right: 17px;
-         position: relative;
+      li {
+         a {
+            position: relative;
+            padding-right: 17px;
 
-         &::before {
-            position: absolute;
-            content: "";
-            top: 6px;
-            right: 0;
-            width: 12px;
-            height: 12px;
-            margin-left: 5px;
-            border-radius: 3px;
-            color: #232629;
-            background-color: rgba(129, 138, 147, 0.5);
-         }
+            &::before {
+               position: absolute;
+               content: "";
+               top: 6px;
+               right: 0;
+               width: 12px;
+               height: 12px;
+               margin-left: 5px;
+               border-radius: 3px;
+               color: #232629;
+               background-color: rgba(129, 138, 147, 0.5);
+            }
 
-         &::after {
-            position: absolute;
-            content: "";
-            top: 10px;
-            right: 5px;
-            width: 3px;
-            height: 3px;
-            margin-left: 5px;
-            border-top: 1px solid #232629;
-            border-right: 1px solid #232629;
-            transform: rotate(45deg);
-         }
+            &::after {
+               position: absolute;
+               content: "";
+               top: 10px;
+               right: 5px;
+               width: 3px;
+               height: 3px;
+               margin-left: 5px;
+               border-top: 1px solid #232629;
+               border-right: 1px solid #232629;
+               transform: rotate(45deg);
+            }
 
-         &:hover::before {
-            background-color: rgba(129, 138, 147, 1);
+            &:hover::before {
+               background-color: rgba(129, 138, 147, 1);
+            }
          }
       }
    }
 
    .footer-right-end {
-      width: 315px;
+      //width: 315px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       font-size: 11px;
+      padding: 10px;
 
       .footer-social-links {
          display: flex;
@@ -99,4 +106,21 @@ footer {
          }
       }
    }
+}
+
+@media (max-width: 900px) {
+   .footer-container {
+      grid-template-columns: 1fr;
+   }
+}
+
+@media screen and (max-width: 620px) {
+   .footer-container nav {
+         flex-wrap: wrap;
+         justify-content: start;
+
+         div {
+            max-width: 45%;
+         }
+      }
 }

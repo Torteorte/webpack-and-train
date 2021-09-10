@@ -1,58 +1,66 @@
 .container {
+  position: relative;
   display: grid;
-  grid-template-columns: 164px 1fr 300px;
-  min-width: 850px;
+  grid-template-columns: 164px 1fr 325px;
   max-width: 1250px;
-  margin: auto;
-  padding-top: 50px;
+  margin: 50px auto 0 auto;
+
+  a {
+    color: #2186d2;
+
+    &:hover {
+      color: #2ea4ff;
+    }
+  }
 
   main {
-    border-left: 1px solid #d6d9dc;
     padding: 24px 0 20px 0;
+    border-left: 1px solid #d6d9dc;
 
     .main-head-field {
-
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       margin-bottom: 24px;
       padding: 0 24px 24px;
 
-      h2 {
-        font-size: 30px;
-        text-align: center;
-        font-weight: normal;
+      h1 {
         margin: 0;
+        font-size: 30px;
+        text-align: left;
+        font-weight: normal;
       }
 
       button {
-        font-size: 13px;
         padding: 10px;
         margin-right: 10px;
+        font-size: 13px;
+        white-space: nowrap;
       }
     }
 
     .bottom-main-button {
       padding: 10px;
       margin-right: 25px;
-      font-size: 13px;
       float: right;
+      font-size: 13px;
+      color: white;
     }
   }
 
   .marks-and-sort {
     font-size: 13px;
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    //border-bottom: 1px solid #d6d9dc;
+    grid-template-columns: 2fr 5fr;
     margin-bottom: 16px;
-    padding: 0 24px;
+    padding: 0 20px;
+    //border-bottom: 1px solid #d6d9dc;
 
     .main-marks {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      width: 250px;
+      //width: 250px;
 
       li {
         margin: 2px;
@@ -60,7 +68,6 @@
     }
 
     .more-marks {
-      color: #2186d2;
       margin-left: 5px;
     }
 
@@ -75,6 +82,7 @@
         border-right: none;
         color: rgb(106, 115, 124);
         cursor: pointer;
+        white-space: nowrap;
 
         &:hover {
           background-color: #f8f9f9;
@@ -86,9 +94,9 @@
         }
 
         span {
-          color: white;
           padding: 2px 5px;
           margin-right: 5px;
+          color: white;
           border-radius: 2px;
           background-color: rgb(0, 116, 204);
           font-size: 11px;
@@ -110,9 +118,10 @@
 
   .mark {
     display: inline-block;
-    color: #4079a1;
     padding: 5px;
+    white-space: nowrap;
     border-radius: 3px;
+    color: #4079a1;
     background-color: #e1ecf4;
 
     &:hover {
@@ -124,7 +133,7 @@
   aside {
     padding-top: 24px;
 
-    h3 {
+    h2 {
       margin-top: 8px;
       color: rgb(59, 64, 69);
       font-weight: normal;
@@ -133,20 +142,14 @@
     ul {
 
       li {
-
-        font-size: 13px;
         margin: 10px 0;
+        font-size: 13px;
         color: #6e767f;
       }
     }
 
     p a {
       font-size: 13px;
-      color: #2186d2;
-
-      &:hover {
-        color: #2ea4ff;
-      }
 
       svg {
         margin: -4px 0;
@@ -160,8 +163,12 @@
 }
 
 .side-nav {
-  color: rgb(82, 89, 96);
   padding-top: 24px;
+  color: rgb(82, 89, 96);
+  top: 50px;
+  //left: 0;
+  position: sticky;
+  max-height: 225px;
 
   li {
     font-size: 13px;
@@ -229,23 +236,23 @@
   color: rgb(131, 140, 149);
 
   > li {
-    padding: 12px 8px;
-    border-bottom: 1px solid #f1f2f3;
     display: grid;
     grid-template-columns: auto 1fr;
+    padding: 12px 8px;
+    border-bottom: 1px solid #f1f2f3;
 
     .question-statistics {
       display: flex;
       flex-direction: row;
-      text-align: center;
       padding-right: 8px;
+      text-align: center;
 
       li {
 
         a {
+          display: inline-block;
           padding: 8px 8px;
           margin-right: 3px;
-          display: inline-block;
           color: rgb(131, 140, 149);
         }
 
@@ -257,32 +264,26 @@
 
     .question {
 
-      h3 {
+      h2 {
         margin: 0 0 10px 2px;
         font-size: 20px;
 
         a {
-          color: #2186d2;
           font-weight: normal;
-
-          &:hover {
-            color: #0a95ff;
-          }
         }
       }
 
       .question-links-information {
-
         display: flex;
         flex-direction: row;
-        align-items: center;
         justify-content: space-between;
+        align-items: center;
 
         .main-marks {
           display: flex;
           flex-direction: row;
           flex-wrap: wrap;
-          width: 250px;
+          max-width: 250px;
 
           li {
             margin: 2px;
@@ -346,5 +347,78 @@
 
   div {
     color: rgb(167, 81, 12);
+  }
+}
+
+@media (max-width: 1075px) {
+  .container {
+    grid-template-columns: 164px 1fr;
+
+    main {
+      padding-bottom: 0;
+
+      .main-head-field {
+        margin-bottom: 0;
+      }
+
+      .question-links-information {
+
+        div {
+          margin: 5px 0 0 auto;
+        }
+      }
+    }
+
+    aside {
+      grid-column: 2 / 3;
+      max-width: 325px;
+      padding: 20px;
+      border-left: 1px solid #d6d9dc;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    .side-nav {
+      display: none;
+    }
+
+    main {
+
+      .questions-field {
+        li {
+          display: block;
+        }
+      }
+
+      .marks-and-sort {
+        display: flex;
+        flex-direction: column;
+
+        .main-sort {
+          flex-wrap: wrap;
+        }
+
+        .more-marks {
+          padding: 5px 0;
+          display: inline-block;
+        }
+
+        .main-sort {
+
+          li:nth-of-type(3) button {
+            border-right: 1px solid;
+          }
+        }
+      }
+
+      .question-statistics {
+        display: none;
+      }
+    }
   }
 }

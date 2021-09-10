@@ -2,22 +2,36 @@ require('normalize.css/normalize.css');
 
 import './scss/app.scss';
 
-let burgerNav = document.querySelector('.burger-nav');
-let navList = document.querySelector('.side-nav');
+const burgerNav = document.querySelector('.burger-nav');
+const navList = document.querySelector('.side-nav');
 
-let burgerOpen = (event) => {
-    event.preventDefault();
-    event.stopPropagation();
-    event.target.closest('.burger-nav').classList.toggle("open");
-    navList.classList.toggle("hidden-nav");
+function toggleBurger(event) {
+    // event.preventDefault()
+    burgerNav.classList.toggle('open')
+    navList.classList.toggle("hidden-nav")
 }
 
-let hideNavList = (event) => {
-    if (event.target.className !== "side-nav") {
-        navList.classList.add("hidden-nav");
-        burgerNav.classList.remove("open");
+burgerNav.addEventListener('click', toggleBurger)
+
+document.addEventListener('click', function(event) {
+    const target = event.target
+    const its_menu = target === burgerNav || burgerNav.contains(target)
+    const its_btnMenu = target === navList
+    const menu_is_active = burgerNav.classList.contains('open')
+
+    if (!its_menu && !its_btnMenu && menu_is_active) {
+        toggleBurger()
     }
+})
+
+const infoButtonsMenu = document.querySelector('.info-buttons')
+const infoButtons = document.querySelectorAll('.info-button-dropdown')
+
+function toggleInfoButton(e) {
+        for (let button of infoButtons) {
+            button.classList.remove('active')
+        }
+    e.target.closest('.info-button-dropdown').classList.add('active')
 }
 
-burgerNav.addEventListener('click', burgerOpen);
-document.addEventListener('click', hideNavList);
+infoButtonsMenu.addEventListener('click', toggleInfoButton)
