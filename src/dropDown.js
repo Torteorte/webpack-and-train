@@ -22,19 +22,23 @@ document.addEventListener('click', function (event) {
    }
 })
 
-
-
 const buttonsMenus = document.querySelectorAll('.info-button');
+const searhLabel = buttonsMenus[0].querySelector('label');
+
+searhLabel.onclick = function () {
+   search.classList.toggle('open')
+}
 
 for (const button of buttonsMenus) {
-
    const infoContainer = button.closest('li').querySelector('.info-container')
 
    button.addEventListener('click', toggleMenu)
 
    function toggleMenu() {
       button.classList.toggle('active-drop')
-      infoContainer.classList.toggle('open')
+      if (button.firstChild === searhLabel) { return }
+      else { infoContainer.classList.toggle('open') }
+
    }
 
    document.addEventListener('click', function (event) {
