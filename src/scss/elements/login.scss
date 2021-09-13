@@ -149,3 +149,21 @@
     }
   }
 }
+
+form .input-container {
+  .validate-email, .validate-password {
+    padding: 0;
+    margin: 10px 2px;
+    color: rgb(208, 57, 62);
+    text-align: left;
+  }
+
+  input.invalid {
+    border-color: rgb(208, 57, 62);
+    background-color: white;
+    background-image: url('../assets/error.svg');
+    background-position: 150px 50%;
+    background-size: 75% 75%;
+    background-repeat: no-repeat;
+  }
+}

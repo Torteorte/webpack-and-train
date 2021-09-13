@@ -3,15 +3,50 @@ require('normalize.css/normalize.css');
 import './scss/app.scss';
 import './dropDown.js';
 
-let formSearch = document.querySelector('.header-form')
-let inputSeacrh = formSearch.querySelector('.header-search-input')
-let visibleDiv = formSearch.querySelector('.seacrh-container')
+const userAlexLogin = "567@mail.deu";
+const userAlexPassword = "456";
 
-formSearch.addEventListener('focus', function () {
-   visibleDiv.classList.add('visible')
-}, true)
+const form  = document.querySelector('#login-form');
+const email = document.querySelector('#login-email');
+const password = document.querySelector('#login-password');
+const invalidTextEmail = document.querySelector('.validate-email');
+const invalidTextPassword = document.querySelector('.validate-password');
 
-document.addEventListener('click', function (event) {
-   if (event.target.closest(".seacrh-container") === visibleDiv || event.target === inputSeacrh) return
-   visibleDiv.classList.remove('visible')
-})
+form.addEventListener('submit', function (event) {
+   event.preventDefault();
+   invalidTextEmail.textContent = '';
+   invalidTextPassword.textContent = '';
+
+   invalidLogin(event);
+
+   if(!email.validity.valid) {
+      showError();
+   }
+   // document.location.href = './indexUser.html'
+});
+
+function showError() {
+   if (email.validity.valueMissing) {
+      invalidTextEmail.textContent = 'Введите email адрес';
+   } else if(email.validity.typeMismatch) {
+      invalidTextEmail.textContent = 'Это поле не является email адресом';
+   }
+}
+
+function invalidLogin(event) {
+   const emailValue = email.value;
+   const passwordValue = password.value;
+
+   email.classList.remove("invalid");
+   password.classList.remove("invalid");
+
+   if (emailValue !== userAlexLogin) {
+      invalidTextEmail.textContent = 'Неверный email';
+      email.classList.add("invalid");
+   } else if (passwordValue !== userAlexPassword) {
+      invalidTextPassword.textContent = 'Неверный пароль';
+      password.classList.add("invalid");
+   } else {
+      document.location.href = './indexUser.html';
+   }
+}

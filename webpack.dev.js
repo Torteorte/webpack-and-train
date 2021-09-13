@@ -34,6 +34,12 @@ module.exports = {
          chunks: ['index'],
          filename: 'registration.html',
       }),
+      new HtmlWebpackPlugin({
+         template: './src/indexUser.html',
+         inject: true,
+         chunks: ['index'],
+         filename: 'indexUser.html',
+      }),
       new MiniCssExtractPlugin({
          filename: './css/[name].css',
       }),

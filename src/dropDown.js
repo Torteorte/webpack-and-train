@@ -23,8 +23,7 @@ document.addEventListener('click', function (event) {
 })
 
 const buttonsMenus = document.querySelectorAll('.info-button');
-const searhLabel = buttonsMenus[0].querySelector('label');
-
+const searhLabel = document.querySelector('.button-for-search').querySelector('label');
 searhLabel.onclick = function () {
    search.classList.toggle('open')
 }
@@ -52,3 +51,16 @@ for (const button of buttonsMenus) {
       }
    })
 }
+
+const formSearch = document.querySelector('.header-form');
+const inputSearch = formSearch.querySelector('.header-search-input');
+const visibleDiv = formSearch.querySelector('.search-container');
+
+formSearch.addEventListener('focus', function () {
+   visibleDiv.classList.add('visible')
+}, true)
+
+document.addEventListener('click', function (event) {
+   if (event.target.closest(".search-container") === visibleDiv || event.target === inputSearch) return
+   visibleDiv.classList.remove('visible')
+})
