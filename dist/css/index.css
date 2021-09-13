@@ -643,7 +643,8 @@ header .user-header-container {
         .products > li .info-container li a:hover {
           border-radius: 3px;
           background-color: #d6d9dc; }
-      .products > li .info-container li h4, .products > li .info-container li p {
+      .products > li .info-container li h4,
+      .products > li .info-container li p {
         margin: 0; }
       .products > li .info-container li h4 {
         color: #0c0d0e;
@@ -682,16 +683,62 @@ header .user-header-container {
     height: 30px; }
 
 .info-button-dropdown .info-container.info-login-user {
-  background-color: aqua; }
+  width: 350px;
+  min-height: 300px; }
   .info-button-dropdown .info-container.info-login-user ul li {
     display: block;
     height: 100%; }
-  .info-button-dropdown .info-container.info-login-user h3, .info-button-dropdown .info-container.info-login-user h4, .info-button-dropdown .info-container.info-login-user p {
+  .info-button-dropdown .info-container.info-login-user h3,
+  .info-button-dropdown .info-container.info-login-user h4,
+  .info-button-dropdown .info-container.info-login-user p {
     margin: 0;
-    background-color: azure;
     text-align: left; }
-    .info-button-dropdown .info-container.info-login-user h3 a, .info-button-dropdown .info-container.info-login-user h4 a, .info-button-dropdown .info-container.info-login-user p a {
-      display: inline-block; }
+  .info-button-dropdown .info-container.info-login-user a {
+    color: #0074cc; }
+    .info-button-dropdown .info-container.info-login-user a:hover {
+      color: #0a95ff; }
+  .info-button-dropdown .info-container.info-login-user h3 {
+    padding: 10px;
+    background-color: #f1f2f3;
+    color: #6a737c;
+    font-size: 13px; }
+    .info-button-dropdown .info-container.info-login-user h3 time {
+      font-weight: normal;
+      color: #9199a1; }
+    .info-button-dropdown .info-container.info-login-user h3 span {
+      float: right; }
+      .info-button-dropdown .info-container.info-login-user h3 span a {
+        display: inline-block;
+        font-weight: normal; }
+  .info-button-dropdown .info-container.info-login-user ul li {
+    position: relative;
+    font-size: 12px; }
+    .info-button-dropdown .info-container.info-login-user ul li a {
+      padding: 12px 12px 12px 35px;
+      display: block; }
+      .info-button-dropdown .info-container.info-login-user ul li a:hover {
+        background-color: #e3e6e8; }
+    .info-button-dropdown .info-container.info-login-user ul li h4 {
+      margin: 0 0 10px;
+      font-weight: normal;
+      color: #838c95; }
+      .info-button-dropdown .info-container.info-login-user ul li h4 span {
+        float: right; }
+    .info-button-dropdown .info-container.info-login-user ul li:last-of-type a {
+      padding: 10px;
+      border-top: 1px solid rgba(227, 230, 232, 0.5); }
+      .info-button-dropdown .info-container.info-login-user ul li:last-of-type a p {
+        text-align: center; }
+    .info-button-dropdown .info-container.info-login-user ul li svg {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      color: #000; }
+  .info-button-dropdown .info-container.info-login-user > p {
+    margin: 5px;
+    padding: 5px;
+    color: #3b4045;
+    font-size: 12px; }
 
 footer {
   width: 100%;

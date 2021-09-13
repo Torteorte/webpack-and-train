@@ -1,5 +1,4 @@
 header {
-
   .user-header-container {
     display: grid;
     grid-template-columns: auto auto 1fr auto;
@@ -61,7 +60,8 @@ header {
         }
       }
 
-      h4, p {
+      h4,
+      p {
         margin: 0;
       }
 
@@ -107,9 +107,9 @@ header {
   padding: 0 10px;
   height: 47px;
 
-   &:hover {
-     background-color: #e2e4e6;
-   }
+  &:hover {
+    background-color: #e2e4e6;
+  }
 
   p {
     color: black;
@@ -123,43 +123,89 @@ header {
 }
 
 .info-button-dropdown .info-container.info-login-user {
+  width: 350px;
+  min-height: 300px;
 
   ul li {
     display: block;
     height: 100%;
   }
 
-  h3, h4, p {
+  h3,
+  h4,
+  p {
     margin: 0;
-    background-color: azure;
     text-align: left;
+  }
 
-    a {
-      display: inline-block;
-      //text-align: right;
-      //margin-left: auto;
+  a {
+    color: rgb(0, 116, 204);
+    &:hover {
+      color: rgb(10, 149, 255);
+    }
+  }
+
+  h3 {
+    padding: 10px;
+    background-color: rgb(241, 242, 243);
+    color: rgb(106, 115, 124);
+    font-size: 13px;
+
+    time {
+      font-weight: normal;
+      color: rgb(145, 153, 161);
     }
 
+    span {
+      float: right;
+      a {
+        display: inline-block;
+        font-weight: normal;
+      }
+    }
   }
-  background-color: aqua;
+
+  ul li {
+    position: relative;
+    font-size: 12px;
+    a {
+      padding: 12px 12px 12px 35px;
+      display: block;
+
+      &:hover {
+        background-color: rgb(227, 230, 232);
+      }
+    }
+    h4 {
+      margin: 0 0 10px;
+      font-weight: normal;
+      color: rgb(131, 140, 149);
+
+      span {
+        float: right;
+      }
+    }
+    &:last-of-type a {
+      padding: 10px;
+      border-top: 1px solid rgba(227, 230, 232, 0.5);
+
+      p {
+        text-align: center;
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      color: #000;
+    }
+  }
+
+  & > p {
+    margin: 5px;
+    padding: 5px;
+    color: rgb(59, 64, 69);
+    font-size: 12px;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
