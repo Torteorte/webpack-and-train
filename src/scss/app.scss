@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-@import "./elements/header.scss";
-@import "./elements/headerUser.scss";
-@import "./elements/footer.scss";
-@import "./elements/login.scss";
-@import "./elements/registration.scss";
-@import "./elements/index.scss";
-@import "./common/Buttons.scss";
-@import "./common/greyInput.scss";
-@import "./common/burger.scss";
-@import "./common/customCheckbox.scss";
+
+@import "src/components/header/header";
+@import "src/components/header/headerUser";
+@import "src/scss/elements/footer";
+@import "src/components/login/login";
+@import "src/components/registration/registration";
+@import "src/scss/elements/index";
+@import "src/scss/common/Buttons";
+@import "src/scss/common/greyInput";
+@import "src/scss/common/burger";
+@import "src/scss/common/customCheckbox";
 
 body {
    background-color: #ffffff;

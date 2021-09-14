@@ -331,6 +331,125 @@ header {
   }
 }
 
+.info-container.info-login-user.user-menu {
+
+  height: 400px;
+  padding-bottom: 0;
+  overflow-y: auto;
+  h3 {
+    font-size: 11px;
+    span {
+      font-size: 12px;
+    }
+  }
+
+  .groups {
+
+    li {
+      border: none;
+      &:last-of-type a {
+        padding: 10px;
+        border-top: none;
+      }
+    }
+
+    a {
+      p {
+        padding: 2px 2px 2px 20px;
+        text-align: left !important;
+
+        span {
+          color: rgba(0, 0, 0, 0.5);
+          float: right;
+        }
+      }
+      svg {
+        padding: 1px;
+        left: 8px;
+        top: 9px;
+        background-color: rgb(0, 116, 204);
+      }
+    }
+
+    &.other-groups {
+      a {
+        padding-left: 10px !important;
+        border-bottom: 1px solid rgba(211, 211, 211, 0.5);
+
+        &::after {
+          content: '';
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      .other-group {
+        p:first-child {
+          background-image: url("../assets/sprites-user-menu.png");
+          background-size: 16px;
+          background-repeat: no-repeat;
+          background-position: 0 0;
+        }
+
+        p:last-child {
+          margin-top: 6px;
+          color: #8d8d8d;
+        }
+      }
+    }
+
+    &.this-group {
+      background-color: #f4f8fb;
+      h4 {
+        font-weight: bold;
+        padding: 5px 5px 5px 25px;
+        margin: 0;
+
+        a {
+          display: inline-block;
+        }
+        span {
+          font-weight: normal;
+        }
+      }
+      a {
+        padding: 5px 0;
+        margin: 0 5px;
+
+        &:hover {
+          background-color: inherit;
+        }
+      }
+      svg {
+        padding: 1px;
+        background-color: rgb(0, 116, 204);
+      }
+    }
+    li:hover {
+      background-color: rgb(225, 236, 244);
+    }
+  }
+
+  form {
+    margin: 10px;
+    #user-search {
+      max-width: 100%;
+    }
+  }
+
+
+}
+
+.user-menu::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f9f9fd;
+}
+
+.user-menu::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: lightgray;
+}
+
 @media (max-width: 820px) {
   header .header-container {
     .header-buttons {

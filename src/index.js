@@ -1,7 +1,10 @@
 require('normalize.css/normalize.css');
 
+import './components/header/header.js'
+import './components/header/dropDown.js';
 import './scss/app.scss';
-import './dropDown.js';
+
+import lamaImage from './assets/alpaka.png';
 
 const userAlexLogin = "567@mail.deu";
 const userAlexPassword = "456";
@@ -18,12 +21,11 @@ if (form) {
       invalidTextEmail.textContent = '';
       invalidTextPassword.textContent = '';
 
-      invalidLogin(event);
+      inputLogin(event);
 
       if (!email.validity.valid) {
          showError();
       }
-      // document.location.href = './indexUser.html'
    });
 }
 
@@ -35,7 +37,7 @@ function showError() {
    }
 }
 
-function invalidLogin(event) {
+function inputLogin(event) {
    const emailValue = email.value;
    const passwordValue = password.value;
 
@@ -49,14 +51,20 @@ function invalidLogin(event) {
       invalidTextPassword.textContent = 'Неверный пароль';
       password.classList.add("invalid");
    } else {
-      document.location.href = './indexUser.html';
+      localStorage.setItem('userName', 'Alex');
+      localStorage.setItem('userLogin', `${emailValue}`);
+
+      document.location = './index.html';
    }
 }
 
 const achievementsTime = document.querySelector("#achievements-time")
 
 let dateNow = new Date()
-achievementsTime.textContent = `Время ${formatDate(dateNow)}`
+
+if (achievementsTime) {
+   achievementsTime.textContent = `Время ${formatDate(dateNow)}`
+}
 
 function formatDate(date) {
 
@@ -67,4 +75,16 @@ function formatDate(date) {
    if (minutes < 10) minutes = '0' + minutes;
 
    return `${hours}:${minutes}`
+}
+
+const exitsUser = document.querySelectorAll('.exitUser');
+
+if (exitsUser) {
+   for (const exit of exitsUser) {
+      exit.addEventListener('click', function(e) {
+         event.preventDefault()
+         localStorage.clear();
+         document.location.href = './index.html';
+      })
+   }
 }

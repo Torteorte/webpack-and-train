@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const path = require('path');
 
 module.exports = {
 
@@ -23,22 +24,16 @@ module.exports = {
          filename: 'index.html',
       }),
       new HtmlWebpackPlugin({
-         template: './src/login.html',
+         template: './src/components/login/login.html',
          inject: true,
          chunks: ['index'],
          filename: 'login.html'
       }),
       new HtmlWebpackPlugin({
-         template: './src/registration.html',
+         template: './src/components/registration/registration.html',
          inject: true,
          chunks: ['index'],
          filename: 'registration.html',
-      }),
-      new HtmlWebpackPlugin({
-         template: './src/indexUser.html',
-         inject: true,
-         chunks: ['index'],
-         filename: 'indexUser.html',
       }),
       new MiniCssExtractPlugin({
          filename: './css/[name].css',

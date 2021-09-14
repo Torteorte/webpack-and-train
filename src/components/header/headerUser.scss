@@ -126,11 +126,6 @@ header {
   width: 350px;
   min-height: 300px;
 
-  ul li {
-    display: block;
-    height: 100%;
-  }
-
   h3,
   h4,
   p {
@@ -149,7 +144,7 @@ header {
     padding: 10px;
     background-color: rgb(241, 242, 243);
     color: rgb(106, 115, 124);
-    font-size: 13px;
+    font-size: 11px;
 
     time {
       font-weight: normal;
@@ -166,6 +161,8 @@ header {
   }
 
   ul li {
+    display: block;
+    height: 100%;
     position: relative;
     font-size: 12px;
     a {
@@ -202,10 +199,54 @@ header {
     }
   }
 
+  .user-in-menu {
+
+    .user-container {
+      display: flex;
+      flex-direction: row;
+      padding: 10px!important;
+      img {
+        width: 40px;
+        height: 40px;
+      }
+
+      & > div {
+        display: flex;
+        flex-direction: column;
+
+        h4 {
+          padding: 0 5px;
+          font-weight: normal;
+        }
+
+        p {
+          color: #545454;
+          text-align: center;
+          font-weight: bold;
+        }
+      }
+
+      span {
+        margin: 0 0 0 auto;
+        align-self: center;
+
+        a {
+          margin: 0;
+        }
+      }
+    }
+
+
+  }
+
   & > p {
     margin: 5px;
     padding: 5px;
     color: rgb(59, 64, 69);
     font-size: 12px;
+  }
+
+  &.user-menu {
+    width: 375px;
   }
 }
